@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startseite</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="nav.js" defer></script>
+  </head>
+
+  <body class="home">
+    <div class="wrapper">
+      <header class="primary-header flex">
+        <div class="logo-group flex">
+          <img
+            src="./assets/Logo_GP.png"
+            alt="Geling & Partner Logo"
+            class="logo logo-gp"
+          />
+          <img
+            src="./assets/Logo_WP.png"
+            alt="Wallner & Partner Logo"
+            class="logo logo-wp"
+          />
+        </div>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li class="active">
+              <a class="text-white white-space-nowrap" href="index.html"
+                >Startseite</a
+              >
+            </li>
+            <li>
+              <a class="text-white white-space-nowrap" href="#"
+                >Unser Service</a
+              >
+            </li>
+            <li>
+              <a class="text-white white-space-nowrap" href="#">Über Uns</a>
+            </li>
+            <li>
+              <a class="text-white white-space-nowrap" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="hero">
+        <div class="hero__left">
+          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+          <button href="#">Termin vereinbaren</button>
+        </div>
+        <img
+          src="./assets/Partnerin-Susanne-Gehling.png"
+          alt="Partnerin-Susanne-Gehling"
+        />
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,41 @@
+:root {
+    --dl-color-white: #fff;
+    --dl-color-grey: #eeeeee;
+    --dl-color-darkgrey: #bcbcbc;
+    --dl-color-black: #212121;
+    --dl-color-red: #d32f2f;
+    --dl-color-lightred: #ff6659;
+    --dl-color-darkred: #9a0007;
+}
+
+* {
+    text-decoration: none;
+}
+
+
+h1, h2, h3 {
+    line-height: 1.1em;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.text-white {
+    color: var(--dl-color-white);
+}
+
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
