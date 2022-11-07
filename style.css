@@ -74,6 +74,7 @@ img {
 
 a:-webkit-any-link {
     color: inherit;
+    padding-bottom: .25em;
 }
 
 
@@ -104,6 +105,10 @@ a:-webkit-any-link {
   width: 1px;
 }
 
+.active {
+    border-bottom: 1px solid var(--dl-color-red);
+}
+
 .spacer {
     aspect-ratio: 960/300;
     width: 100%;
@@ -115,3 +120,28 @@ a:-webkit-any-link {
 .wave {
     background-image: url(assets/wave-haikei\ \(1\).svg);
 }
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: var(--dl-color-red);
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--dl-color-red);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

@@ -10,39 +10,39 @@
     <link rel="stylesheet" href="./service.css" />
     <script src="nav.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-        <header class="primary-header flex">
-            <div class="logo-group flex">
-                <img src="./assets/Logo_GP_red.png" alt="Geling & Partner Logo" class="logo logo-gp" />
-                <img src="./assets/Logo_WP_red.png" alt="Wallner & Partner Logo" class="logo logo-wp" />
-            </div>
+    <header class="primary-header flex">
+        <div class="logo-group flex">
+            <a href="index.html"><img src="./assets/Logo_GP.png" alt="Geling & Partner Logo" class="logo logo-gp" /></a>
+            <a href="index.html"><img src="./assets/Logo_WP.png" alt="Wallner & Partner Logo"
+                    class="logo logo-wp" /></a>
+        </div>
 
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-            </button>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
 
-            <nav>
-                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-                    <li class="active">
-                        <a class="white-space-nowrap" href="index.html">Startseite</a>
-                    </li>
-                    <li>
-                        <a class="white-space-nowrap" href="#">Unser Service</a>
-                    </li>
-                    <li>
-                        <a class="white-space-nowrap" href="#">Über Uns</a>
-                    </li>
-                    <li>
-                        <a class="white-space-nowrap" href="#">Kontakt</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div class="wrapper">
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                <li>
+                    <a class="white-space-nowrap hover-underline-animation" href="index.html">Startseite</a>
+                </li>
+                <li class="active">
+                    <a class="white-space-nowrap hover-underline-animation" href="service.html">Unser Service</a>
+                </li>
+                <li>
+                    <a class="white-space-nowrap hover-underline-animation" href="#">Über Uns</a>
+                </li>
+                <li>
+                    <a class="white-space-nowrap hover-underline-animation" href="#">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
         <section class="offers">
             <h3>Unser Service Menü</h3>
             <div class="offers-grid">
@@ -126,7 +126,7 @@
                             <li>
                                 <p>Unternehmensnachfolge</p>
                             </li>
-                            <li>    
+                            <li>
                                 <p>Mitarbeiterbeteiligung</p>
                             </li>
                             <li>
@@ -161,30 +161,30 @@
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
     </div>
     <footer>
         <div class="footer-content">
             <div class="footer-logo-group">
-                <a href="index.html"><img src="./assets/Logo_GP_red.png" alt="Geling & Partner Logo"
+                <a href="index.html"><img src="./assets/Logo_GP.png" alt="Geling & Partner Logo"
                         class="logo logo-gp" /></a>
-                <a href="index.html"><img src="./assets/Logo_WP_red.png" alt="Wallner & Partner Logo"
+                <a href="index.html"><img src="./assets/Logo_WP.png" alt="Wallner & Partner Logo"
                         class="logo logo-wp" /></a>
             </div>
             <div>
                 <span class="sec-nav-title">Menü</span>
                 <ul class="secondary-navigation flex">
                     <li>
-                        <a class="active white-space-nowrap" href="index.html">Startseite</a>
+                        <a class="white-space-nowrap  hover-underline-animation" href="index.html">Startseite</a>
+                    </li>
+                    <li class="active">
+                        <a class="white-space-nowrap  hover-underline-animation" href="service.html">Unser Service</a>
                     </li>
                     <li>
-                        <a class="white-space-nowrap" href="service.html">Unser Service</a>
+                        <a class="white-space-nowrap  hover-underline-animation" href="#">Über Uns</a>
                     </li>
                     <li>
-                        <a class="white-space-nowrap" href="#">Über Uns</a>
-                    </li>
-                    <li>
-                        <a class="white-space-nowrap" href="#">Kontakt</a>
+                        <a class="white-space-nowrap  hover-underline-animation" href="#">Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -192,10 +192,10 @@
                 <span class="sec-nav-title">Weiteres</span>
                 <ul class="secondary-navigation flex">
                     <li>
-                        <a class="white-space-nowrap" href="index.html">Impressum</a>
+                        <a class="white-space-nowrap hover-underline-animation" href="impressum.html">Impressum</a>
                     </li>
                     <li>
-                        <a class="white-space-nowrap" href="service.html">Datenschutz</a>
+                        <a class="white-space-nowrap hover-underline-animation" href="datenschutz.html">Datenschutz</a>
                     </li>
                 </ul>
             </div>
@@ -203,8 +203,10 @@
                 <span class="sec-nav-title">Kontakt</span>
                 <ul>
                     <li>
-                        <span class="material-icons">phone</span>
-                        <p>089 / 368147-0</p>
+                        <a href="tel:0893681470" class="hover-underline-animation">
+                            <span class="material-icons">phone</span>
+                            <p>089 / 368147-0</p>
+                        </a>
                     </li>
                     <li>
                         <span class="material-icons">fax</span>
@@ -221,4 +223,5 @@
             Schwabing</p>
     </footer>
 </body>
+
 </html>

@@ -3,6 +3,7 @@
   --dl-color-grey: #eeeeee;
   --dl-color-darkgrey: #bcbcbc;
   --dl-color-black: #212121;
+  --dl-color-dark: #191716;
   --dl-color-red: #d32f2f;
   --dl-color-lightred: #ff6659;
   --dl-color-darkred: #9a0007;
@@ -44,7 +45,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  color: var(--dl-color-red);
+  color: var(--dl-color-dark);
 }
 
 .mobile-nav-toggle {
@@ -166,6 +167,7 @@ footer {
   width: 100%;
   justify-content: space-between;
   margin-bottom: 3em;
+  flex-wrap: wrap;
 }
 
 .footer-logo-group {
@@ -177,11 +179,13 @@ footer {
 .footer-content ul {
   list-style: none;
   padding: 0;
+  min-width: 20ch;
 }
 
 .secondary-navigation {
   display: flex;
   flex-direction: column;
+  color: var(--dl-color-dark);
 }
 
 .sec-nav-title {
@@ -202,6 +206,12 @@ footer {
 }
 
 .footer-contact ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.footer-contact ul li a {
   display: flex;
   flex-direction: row;
   gap: 1em;
