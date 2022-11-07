@@ -72,6 +72,10 @@ img {
   display: block;
 }
 
+a:-webkit-any-link {
+    color: inherit;
+}
+
 
 /* --------------- */
 /* Utility Classes */
@@ -98,4 +102,16 @@ img {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wave {
+    background-image: url(assets/wave-haikei\ \(1\).svg);
 }
