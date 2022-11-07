@@ -140,15 +140,40 @@ body {
 /*   Offers section   */
 /* ------------------ */
 
-.offers {
-  min-height: 20em;
-  padding: 8em;
+.contact {
+  min-height: 100vh;
+  padding: 3em;
 }
 
-.offers-grid {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 3em;
+.hero {
+  display: flex;
+  flex-direction: row;
+  height: 15em;
+  align-items: center;
+  gap: 2em;
+  max-width: 40ch;
+}
+
+.contact-container ul span {
+  color: var(--dl-color-red);
+}
+
+.contact-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-container ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.contact-container ul li a {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
 
 /* ---------- */

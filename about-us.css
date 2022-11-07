@@ -140,15 +140,23 @@ body {
 /*   Offers section   */
 /* ------------------ */
 
-.offers {
-  min-height: 20em;
-  padding: 8em;
+.about {
+  min-height: 100vh;
+  padding: 3em;
 }
 
-.offers-grid {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 3em;
+.hero {
+  display: flex;
+  flex-direction: row;
+  height: 15em;
+  align-items: center;
+  gap: 2em;
+}
+
+.hero img {
+  border-radius: 100%;
+  width: 15em;
+  background-color: var(--dl-color-darkgrey);
 }
 
 /* ---------- */
