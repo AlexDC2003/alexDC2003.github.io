@@ -162,6 +162,11 @@ body {
   margin-bottom: 0.85em;
 }
 
+.left a {
+  cursor: pointer;
+  padding: 1em 2em;
+}
+
 .right {
   z-index: -1;
 }
@@ -172,6 +177,8 @@ body {
   right: 0;
   height: 90%;
 }
+
+
 
 .cta {
   width: max-content;
@@ -185,6 +192,7 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
 }
 .cta:after {
   content: "";
@@ -298,6 +306,23 @@ body {
   grid-template-columns: repeat(2, auto);
   gap: 3em;
 }
+
+.beratungen-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+  height: 5em;
+  width: 25em;
+
+  background-color: var(--dl-color-white);
+  border-radius: 3px;
+}
+
+.beratungen-image {
+  height: inherit;
+}
+
 
 /* ---------- */
 /*   footer   */
