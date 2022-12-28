@@ -96,15 +96,10 @@ header::after {
 }
 
 .site-nav a {
-  color: var(--dl-color-grey);
+  color: var(--dl-color-dark);
   display: block;
   padding: 1em 2em;
   text-decoration: none;
-}
-
-.site-nav a:hover,
-.site-nav a:focus {
-  color: var(--dl-color-darkgrey);
 }
 
 @media only screen and (max-width: 55em) {
