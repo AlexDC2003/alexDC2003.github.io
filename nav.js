@@ -1,15 +1,20 @@
-const primaryNav = document.querySelector(".primary-navigation");
-const navToggle = document.querySelector(".mobile-nav-toggle");
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNavigation = document.querySelector('.primary-navigation');
 
-navToggle.addEventListener("click", () => {
-   const visibility = primaryNav.getAttribute("data-visible");
-    
-   if (visibility === "false"){
-    primaryNav.setAttribute("data-visible", true);
-    navToggle.setAttribute("aria-expanded", true);
-   } else if (visibility === "true"){
-    primaryNav.setAttribute("data-visible", false);
-    navToggle.setAttribute("aria-expanded", false);
-   }
+menuToggle.addEventListener('click', () => {
+  const isOpened = menuToggle.getAttribute('aria-expanded') === "true";
+  if (isOpened ? closeMenu() : openMenu());
 });
 
+function openMenu() {
+  menuToggle.setAttribute('aria-expanded', "true");
+  siteNavigation.setAttribute('data-state', "opened");
+}
+function closeMenu() {
+  menuToggle.setAttribute('aria-expanded', "false");
+  siteNavigation.setAttribute('data-state', "closing");
+
+  siteNavigation.addEventListener('animationend', () => {
+    siteNavigation.setAttribute('data-state', "closed");
+  }, {once: true})
+}

@@ -6,42 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Startseite</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <script src="nav.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
-    <header class="primary-header flex">
-        <div class="logo-group flex">
-            <a href="index.html"><img src="./assets/Logo_GP.png" alt="Geling & Partner Logo" class="logo logo-gp" /></a>
-            <a href="index.html"><img src="./assets/Logo_WP.png" alt="Wallner & Partner Logo"
-                    class="logo logo-wp" /></a>
-        </div>
-
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-        </button>
-
-        <nav>
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-                <li class="active">
-                    <a class="white-space-nowrap hover-underline-animation" href="index.html">Startseite</a>
+    <header>
+        <div class="container">
+            <ul class="logo-group" id="logo-group">
+                <li>
+                    <a href="/index.html"><img src="./assets/Logo_GP.png" alt="Geling & Partner Logo"
+                        class="logo logo-gp" /></a>
                 </li>
                 <li>
-                    <a class="white-space-nowrap hover-underline-animation" href="service.html">Unser Service</a>
-                </li>
-                <li>
-                    <a class="white-space-nowrap hover-underline-animation" href="about-us.html">Über Uns</a>
-                </li>
-                <li>
-                    <a class="white-space-nowrap hover-underline-animation" href="contact.html">Kontakt</a>
+                    <a href="/index.html"><img src="./assets/Logo_WP.png" alt="Wallner & Partner Logo"
+                        class="logo logo-wp" /></a>
                 </li>
             </ul>
-        </nav>
+
+            <nav class="site-nav">
+                <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                    <span class="visually-hidden">Menu</span>
+                    <div class="hamburger" aria-hidden="true"></div>
+                </button>
+
+                <ul data-state="closed" class="primary-navigation" id="primary-navigation">
+                    <li class="active">
+                        <a href="/index.html" class="hover-underline-animation">Startseite</a>
+                    </li>
+                    <li>
+                        <a href="/unser-service.html" class="hover-underline-animation">Unser Service</a>
+                    </li>
+                    <li>
+                        <a href="/ueber-uns.html" class="hover-underline-animation">Über Uns</a>
+                    </li>
+                    <li>
+                        <a href="/kontakt.html" class="hover-underline-animation">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <div class="wrapper">
         <div class="hero">
             <div class="left">
@@ -49,7 +58,7 @@
                 <a href="contact.html"><button class="cta">Termin vereinbaren</button></a>
             </div>
             <div class="right">
-                <img src="assets/Partnerin-Susanne-Gehling.png" alt="">
+                <img src="assets/Partnerin-Susanne-Gehling.png" alt="" />
             </div>
         </div>
         <section class="features">
@@ -60,8 +69,11 @@
                             <span class="material-icons">group</span>
                         </div>
                         <h4 class="feature-list-title">Persönlich</h4>
-                        <p class="feature-list-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
-                            repellendus unde ipsum aut debitis asperiores, sapiente officia in distinctio id.</p>
+                        <p class="feature-list-text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+                            repellendus unde ipsum aut debitis asperiores, sapiente officia
+                            in distinctio id.
+                        </p>
                     </li>
                     <li>
                         <div class="feature-icon">
@@ -72,16 +84,22 @@
                             </svg>
                         </div>
                         <h4 class="feature-list-title">Effizient</h4>
-                        <p class="feature-list-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
-                            repellendus unde ipsum aut debitis asperiores, sapiente officia in distinctio id.</p>
+                        <p class="feature-list-text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+                            repellendus unde ipsum aut debitis asperiores, sapiente officia
+                            in distinctio id.
+                        </p>
                     </li>
                     <li>
                         <div class="feature-icon">
                             <span class="material-icons">favorite</span>
                         </div>
                         <h4 class="feature-list-title">Bewährt</h4>
-                        <p class="feature-list-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
-                            repellendus unde ipsum aut debitis asperiores, sapiente officia in distinctio id.</p>
+                        <p class="feature-list-text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+                            repellendus unde ipsum aut debitis asperiores, sapiente officia
+                            in distinctio id.
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -90,7 +108,7 @@
             <h3>Wen wir beraten</h3>
             <div class="beratungen-grid">
                 <div class="beratungen-container">
-                        <img class="beratungen-image" src="assets/images/architect.jpg" alt="">
+                    <img class="beratungen-image" src="assets/images/architect.jpg" alt="" />
                     <div class="beratungen-text">
                         <p>Architekturbüros</p>
                     </div>
@@ -99,6 +117,7 @@
         </section>
     </div>
     <footer>
+        <div class="container">
         <div class="footer-content">
             <div class="footer-logo-group">
                 <a href="index.html"><img src="./assets/Logo_GP.png" alt="Geling & Partner Logo"
@@ -110,16 +129,16 @@
                 <span class="sec-nav-title">Menü</span>
                 <ul class="secondary-navigation flex">
                     <li class="active">
-                        <a class="white-space-nowrap  hover-underline-animation" href="index.html">Startseite</a>
+                        <a class="white-space-nowrap hover-underline-animation" href="index.html">Startseite</a>
                     </li>
                     <li>
-                        <a class="white-space-nowrap  hover-underline-animation" href="service.html">Unser Service</a>
+                        <a class="white-space-nowrap hover-underline-animation" href="service.html">Unser Service</a>
                     </li>
                     <li>
-                        <a class="white-space-nowrap  hover-underline-animation" href="about-us.html">Über Uns</a>
+                        <a class="white-space-nowrap hover-underline-animation" href="about-us.html">Über Uns</a>
                     </li>
                     <li>
-                        <a class="white-space-nowrap  hover-underline-animation" href="contact.html">Kontakt</a>
+                        <a class="white-space-nowrap hover-underline-animation" href="contact.html">Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -149,13 +168,16 @@
                     </li>
                     <li>
                         <span class="material-icons">location_on</span>
-                        <p>Simmernstraße 1<br>80804 München</p>
+                        <p>Simmernstraße 1<br />80804 München</p>
                     </li>
                 </ul>
             </div>
         </div>
-        <p class="copyright">© 2022 Gehling &amp; Partner - Wallner &amp; Partner - Ihr Steuerberater in München
-            Schwabing</p>
+    </div>
+    <p class="copyright">
+        © 2022 Gehling &amp; Partner - Wallner &amp; Partner - Ihr Steuerberater
+        in München Schwabing
+    </p>
     </footer>
 </body>
 
