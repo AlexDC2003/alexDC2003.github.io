@@ -14,34 +14,43 @@
 </head>
 
 <body>
-    <header class="primary-header flex">
-        <div class="logo-group flex">
-            <a href="index.html"><img src="./assets/Logo_GP.png" alt="Geling & Partner Logo" class="logo logo-gp" /></a>
-            <a href="index.html"><img src="./assets/Logo_WP.png" alt="Wallner & Partner Logo"
-                    class="logo logo-wp" /></a>
-        </div>
-
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-        </button>
-
-        <nav>
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+    <header>
+        <div class="container">
+            <ul class="logo-group" id="logo-group">
                 <li>
-                    <a class="white-space-nowrap hover-underline-animation" href="index.html">Startseite</a>
+                    <a href="/index.html"><img src="./assets/Logo_GP.png" alt="Geling & Partner Logo"
+                        class="logo logo-gp" /></a>
                 </li>
                 <li>
-                    <a class="white-space-nowrap hover-underline-animation" href="service.html">Unser Service</a>
-                </li>
-                <li class="active">
-                    <a class="white-space-nowrap hover-underline-animation" href="about-us.html">Über Uns</a>
-                </li>
-                <li>
-                    <a class="white-space-nowrap hover-underline-animation" href="contact.html">Kontakt</a>
+                    <a href="/index.html"><img src="./assets/Logo_WP.png" alt="Wallner & Partner Logo"
+                        class="logo logo-wp" /></a>
                 </li>
             </ul>
-        </nav>
+
+            <nav class="site-nav">
+                <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                    <span class="visually-hidden">Menu</span>
+                    <div class="hamburger" aria-hidden="true"></div>
+                </button>
+
+                <ul data-state="closed" class="primary-navigation" id="primary-navigation">
+                    <li class="active">
+                        <a href="/index.html" class="hover-underline-animation">Startseite</a>
+                    </li>
+                    <li>
+                        <a href="/unser-service.html" class="hover-underline-animation">Unser Service</a>
+                    </li>
+                    <li>
+                        <a href="/ueber-uns.html" class="hover-underline-animation">Über Uns</a>
+                    </li>
+                    <li>
+                        <a href="/kontakt.html" class="hover-underline-animation">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    
     <div class="wrapper">
             <section class="about">
                 <div class="hero">

@@ -41,94 +41,183 @@ body {
 /*   Header & nav   */
 /* ---------------- */
 
-.primary-header {
-  align-items: center;
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
-  width: 100%;
-  color: var(--dl-color-dark);
 }
 
-.mobile-nav-toggle {
-  display: none;
+header {
+  color: var(--dl-color-dark);
+  padding: 1em 0;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .logo-group {
-  margin-inline: 2em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
 }
 
 .logo {
   height: 2.5em;
+  float: left;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.site-nav {
+  width: fit-content;
 }
 
 .primary-navigation {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 
-@media (max-width: 47em) {
+.primary-navigation li {
+  text-align: center;
+}
+
+.site-nav a {
+  color: var(--dl-color-dark);
+  display: block;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 55em) {
   .primary-navigation {
-    --gap: 2em;
-
-    position: fixed;
-    z-index: 1000;
-    inset: 0 0 0 30%;
-
-    text-align: right;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.15rem;
-
-    flex-direction: column;
-    padding: min(30vh, 10rem) 2em;
-    background: var(--dl-color-black);
-
-    transform: translateX(100%);
-    transition: transform 300ms ease-out;
-  }
-
-  .primary-navigation[data-visible="true"] {
-    transform: translateX(0%);
-  }
-
-  .mobile-nav-toggle {
-    display: block;
     position: absolute;
-    width: 1.5rem;
-    aspect-ratio: 1;
-    top: 2.5rem;
-    right: 2.5rem;
-    z-index: 9999;
-    border: 0;
+    top: 100%;
+    right: 0%;
+    background: var(--dl-color-grey);
+    transition: clip-path ease-in-out 700ms;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    box-shadow: 1px 1px 30px #19171630;
+  }
+  .primary-navigation[data-state="opened"] {
+    animation: clipPathCircleOpen 750ms ease-in-out forwards;
+    display: block;
+  }
+  
+  .primary-navigation[data-state="closing"] {
+    animation: clipPathCircleClose 750ms ease-in-out forwards;
+  }
+  .primary-navigation[data-state="closed"] {
+    display: none;
+  }
+  
+  @keyframes clipPathCircleOpen {
+    0% { clip-path: circle(0% at top right); }
+    100% { clip-path: circle(250% at top right); }
+  }
+  @keyframes clipPathCircleClose {
+    0% { clip-path: circle(250% at top right); }
+    100% { clip-path: circle(0% at top right); }
+  }
+  
+  .site-nav li {
+    border-bottom: 1px solid var(--dl-color-red);
+  }
+  
+  .site-nav li:last-child {
+    border-bottom: none;
+  }
+  
+  .site-nav a {
+    color: var(--dl-color-dark);
+    display: block;
+    padding: 2em 4em 2em 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .site-nav a:hover,
+  .site-nav a:focus {
+    background: var(--dl-color-red);
+    color: var(--dl-color-grey);
+  }
+  
+  .site-nav--icon {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .menu-toggle {
+    padding: 1em;
     background: transparent;
-    background-image: url("assets/icon-hamburger.svg");
-    background-repeat: no-repeat;
+    border: 0;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    cursor: pointer;
+    display: block;
   }
-
-  .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url("assets/icon-close.svg");
-    fill: #d32f2f;
+  
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    display: block;
+    background: #ebebd3;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
   }
-
-  .logo-wp {
-    display: none;
+  
+  .hamburger::before {
+    transform: translateY(-6px);
   }
-  .logo-group {
-    margin-block: 2rem;
+  
+  .hamburger::after {
+    transform: translateY(3px);
   }
-}
-
-@media (min-width: 35em) and (max-width: 60em) {
-  .logo-wp {
-    display: none;
+  
+  [aria-expanded="true"] .hamburger {
+    transform: rotate(45deg);
   }
-}
-
-@media (min-width: 47em) {
-  .primary-navigation {
-    --gap: clamp(1.5rem, 20vw, 3rem);
-    padding-block: 2rem;
-    padding-inline: clamp(3rem, 5vw, 10rem);
+  
+  [aria-expanded="true"] .hamburger::before {
+    opacity: 0;
+  }
+  
+  [aria-expanded="true"] .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+  }
+  
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 }
 
