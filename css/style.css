@@ -82,6 +82,14 @@ a:-webkit-any-link {
 /* Utility Classes */
 /* --------------- */
 
+
+.max-width {
+  width: 95%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -118,7 +126,7 @@ a:-webkit-any-link {
 }
 
 .wave {
-    background-image: url(assets/wave-haikei\ \(1\).svg);
+    background-image: url(assets/wave-haikei.svg);
 }
 
 

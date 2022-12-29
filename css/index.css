@@ -8,20 +8,20 @@
   --dl-color-lightred: #ff6659;
   --dl-color-darkred: #9a0007;
 
-  --fz-xl: clamp(3.5rem, 12vw + 1rem, 5rem);
-  --fz-600: 2rem;
-  --fz-500: 1.5rem;
-  --fz-400: 1.25rem;
-  --fz-300: 1rem;
-}
-
-@media (max-width: 40em) {
-  :root {
-    --fz-600: 3rem;
-    --fz-500: 1.5rem;
-    --fz-400: 1.25rem;
-    --fz-300: 1.125rem;
-  }
+  --fw-light: 400;
+  --fw-normal: 500;
+  --fw-bold: 800;
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-450: 1.5rem;
+  --fs-500: 1.75rem;
+  --fs-600: 2rem;
+  --fs-650: 2.5rem;
+  --fs-700: 3.5rem;
+  --fs-800: 6.25rem;
+  --fs-900: 9.375rem;
 }
 
 html {
@@ -35,6 +35,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--dl-color-grey);
+  overflow-x: auto;
+  line-height: 1.5;
 }
 
 /* ---------------- */
@@ -43,7 +45,7 @@ body {
 
 .container {
   width: 95%;
-  max-width: 1400px;
+  max-width: 1800px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -73,6 +75,12 @@ header::after {
 .logo {
   height: 2.5em;
   float: left;
+}
+
+@media only screen and (max-width: 35em){
+  .logo-wp {
+    display: none;
+  }
 }
 
 .menu-toggle {
@@ -183,7 +191,7 @@ header::after {
   .hamburger::after {
     content: "";
     display: block;
-    background: #ebebd3;
+    background: var(--dl-color-red);
     height: 3px;
     width: 1.75em;
     border-radius: 3px;
@@ -225,47 +233,47 @@ header::after {
 /*       Hero       */
 /* ---------------- */
 
+
 .hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
 
-  height: 95vh;
-  padding-inline: 3em;
-  padding-bottom: 3em;
-
-  background-image: url(assets/wave-haikei3.svg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100%;
+  padding-top: 5.5em;
+  padding-bottom: 10.5em;
 }
 
 .left h1 {
-  font-size: 4rem;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-700);
   color: var(--dl-color-red);
-  margin-bottom: 0.85em;
+  line-height: 1.2;
+  margin-top: 3.5em;
+  margin-bottom: 0.25em;
+  max-width: 20ch;
 }
 
-.left a {
-  cursor: pointer;
-  padding: 1em 2em;
+.left p {
+  color: var(--dl-color-dark);
+  font-weight: var(--fw-normal);
+  max-width: 35rem;
 }
 
 .right {
   z-index: -1;
+  height: auto;
+  width: auto;
 }
 
 .right img {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 90%;
+  right: 0%;
+  top: 10%;
 }
 
-
-
 .cta {
+  margin-top: 2em;
   width: max-content;
   display: inline-block;
   padding: 1em 2em;
@@ -311,11 +319,45 @@ header::after {
   width: 100%;
 }
 
-@media only screen and (max-width: 1100px) {
-  .hero img {
+@media (max-width: 75em) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    padding-bottom: -10em;
+  }
+
+  .left h1 {
+    margin-top: 1.5em;
+  }
+
+  .right img {
     display: none;
   }
 }
+
+
+
+.wave-thing {
+  padding: 70px;
+  position: relative;
+  background-size: cover;
+  background-position: 10%;
+  background-image: url(/assets/wave-haikei3.svg);
+  background-repeat: repeat-x;
+}
+
+.wave-thing-reverse {
+  padding: 60px;
+  position: relative;
+  background-size: cover;
+  background-position: 10%;
+  background-image: url(/assets/wave-haikei3-rotated.svg);
+  background-repeat: repeat-x;
+}
+
 
 /* ------------------------- */
 /*       First Section       */
@@ -332,8 +374,7 @@ header::after {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   align-items: center;
   justify-content: center;
   gap: 3em;
@@ -344,6 +385,12 @@ header::after {
 }
 
 .feature-icon {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-box {
   background-color: var(--dl-color-grey);
   display: flex;
   border-radius: 100%;
@@ -351,8 +398,6 @@ header::after {
   width: 5em;
   height: 5em;
   justify-content: center;
-  text-align: center;
-  align-content: center;
   align-items: center;
 }
 
@@ -372,18 +417,31 @@ header::after {
   font-size: 0.9rem;
 }
 
+
+@media (max-width: 35em) {
+  .feature-list ul{
+    width: 100%;
+  }
+
+  .feature-list ul li {
+    text-align: center;
+    max-width: none;
+  }
+
+  .feature-icon {
+    display: flex;
+
+  }
+
+}
+
+
 /* ------------------ */
 /*   Offers section   */
 /* ------------------ */
 
 .beratungen {
   min-height: 20em;
-  padding: 8em;
-
-  background-image: url(assets/wave-haikei3-rotated.svg);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
 }
 
 .beratungen-grid {
@@ -398,7 +456,6 @@ header::after {
   align-items: center;
   gap: 2em;
   height: 5em;
-  width: 25em;
 
   background-color: var(--dl-color-white);
   border-radius: 3px;
