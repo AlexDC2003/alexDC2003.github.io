@@ -7,21 +7,22 @@
   --dl-color-lightred: #ff6659;
   --dl-color-darkred: #9a0007;
 
-  --fz-xl: clamp(3.5rem, 12vw + 1rem, 5rem);
-  --fz-600: 2rem;
-  --fz-500: 1.5rem;
-  --fz-400: 1.25rem;
-  --fz-300: 1rem;
+  --fw-light: 400;
+  --fw-normal: 500;
+  --fw-bold: 800;
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-450: 1.5rem;
+  --fs-500: 1.75rem;
+  --fs-600: 2rem;
+  --fs-650: 2.5rem;
+  --fs-700: 3.5rem;
+  --fs-800: 6.25rem;
+  --fs-900: 9.375rem;
 }
 
-@media (max-width: 40em) {
-  :root {
-    --fz-600: 3rem;
-    --fz-500: 1.5rem;
-    --fz-400: 1.25rem;
-    --fz-300: 1.125rem;
-  }
-}
 
 *,
 *::before,
@@ -89,45 +90,29 @@ a:-webkit-any-link {
   margin: 0 auto;
 }
 
-
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
-}
-
-.text-white {
-  color: var(--dl-color-white);
-}
-
-.white-space-nowrap {
-  white-space: nowrap;
-}
-
-.sr-only {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
 
 .active {
     border-bottom: 1px solid var(--dl-color-red);
 }
 
-.spacer {
-    aspect-ratio: 960/300;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.section-text {
+  color: var(--dl-color-dark);
+  font-weight: var(--fw-normal);
+  max-width: 35rem;
 }
 
-.wave {
-    background-image: url(assets/wave-haikei.svg);
+.section-title {
+  color: var(--clr-text-dark);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+  margin-top: 3em;
+  margin-bottom: 0.5em;
 }
+
 
 
 .hover-underline-animation {
@@ -153,3 +138,4 @@ a:-webkit-any-link {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+

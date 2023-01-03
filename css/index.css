@@ -254,12 +254,6 @@ header::after {
   max-width: 20ch;
 }
 
-.left p {
-  color: var(--dl-color-dark);
-  font-weight: var(--fw-normal);
-  max-width: 35rem;
-}
-
 .right {
   z-index: -1;
   height: auto;
@@ -337,6 +331,7 @@ header::after {
     display: none;
   }
 }
+
 
 
 
@@ -448,6 +443,8 @@ header::after {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 3em;
+  margin-top: 3.5em;
+  margin-bottom: 6em;
 }
 
 .beratungen-container {
